@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/examples/jumbotron-narrow/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+
+    <title>SENSE 3 – CT and MR Comparison</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/jumbotron-narrow.css" rel="stylesheet">
+
+    <style type="text/css"></style></head>
+        <body>
+
+            <div class="container">
+                <div class="header">
+                    <ul class="nav nav-pills pull-right">
+                        <li class="active"><a href="/">Home</a></li>
+                        <li><a href="/add_patient">Add Patient</a></li>
+                    </ul>
+                    <h3 class="text-muted">Sense 3</h3>
+                </div>
+
+                <!-- <div class="jumbotron"> -->
+                <h1>SENSE 3 - CT and MR Comp</h1>
+                <hr width='100%' color='blue' size='6px'>
+                <!-- </div> -->
+
+                <div class='studylist'>
+                    <table class="table table-striped">  
+                        <tr>
+                            <th>Study ID</th>
+                            <th>Enrollment Time</th>
+                            <th>Last Update Time</th>
+                        </tr>
+                        {% for i in range(studylist|length) %}
+                            <tr cols=3>
+                                <td><a href="/patient_info?patid={{studylist[i]}}">{{studylist[i]}}</a></td>
+                                <td>{{tlist[i]}}</td>
+                                <td>{{ulist[i]}}</td>
+                            </tr> 
+                        {% endfor %}
+                    </table>
+                </div>
+
+                <p>
+                    <a class="btn btn-lg btn-success" href="/add_patient" role="button">Add new patient</a>
+                </p>
+
+                <div class="footer">
+                    <p>© Natalie Han 2014</p>
+                </div>
+
+            </div> <!-- /container -->
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+    
+
+</body></html>

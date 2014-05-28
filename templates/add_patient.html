@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/examples/jumbotron-narrow/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+<script src='assets/sense3.js'></script>
+<title>SENSE 3 – CT and MR Comparison</title>
+
+<!-- Bootstrap core CSS -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+<style type="text/css"></style></head>
+
+<body>
+
+<form action='/create_patient' method='post'>
+
+    <div class="container">
+        <div class="header">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/add_patient">Add Patient</a></li>
+            </ul>
+            <h3 class="text-muted">Sense 3</h3>
+        </div>
+
+        <h1>SENSE 3 - Create New Patient</h1>
+        <hr width='100%' color='blue' size='6'>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">Please enter Study ID 01-</span>
+            <input type="text" class="form-control" placeholder="4 digits – 3 patient initials" name='patientid' required>
+        </div>
+
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">Enrollment Date:</span>
+            <input type="text" class="form-control" placeholder="mm/dd/yyyy" name='edate' required>
+            <span class="input-group-addon">Enrollment Time:</span>
+            <input type="text" class="form-control" placeholder="HH:MM" name='etime' required>
+        </div>
+
+
+        <div style="margin-top:10px;">
+            <p align="center">
+                <a class="btn btn-lg btn-warning" href="/" role="button">Cancel</a>
+                <input type="submit" class="btn btn-lg btn-success" value='Continue'>
+            </p>
+        </div>
+
+        <div class="footer">
+            <p>© Natalie Han 2014</p>
+        </div>
+
+    </div> <!-- /container -->
+
+</form>
+</body>
+</html>
